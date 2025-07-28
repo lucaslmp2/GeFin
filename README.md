@@ -4,7 +4,7 @@
 ![Badge](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Badge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-![Badge](https://github.com/lucaslmp2/Gerenciador-Financeiro/blob/main/GeFin.png)
+![Badge](https://github.com/lucaslmp2/GeFin/blob/main/GeFin.png)
 
 ## 📖 Sobre o Projeto
 
