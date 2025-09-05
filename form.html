@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Incluir Registro</title>
+  <link rel="stylesheet" href="form.css" />
+</head>
+<body>
+    <div class="container">
+        <h1><i id="icon" class="fas fa-chart-line"></i> GeFin</h1>
+  <div class="container">
+    <h1>Incluir Novo Registro Financeiro</h1>
+    <form id="form-financeiro">
+      <input type="hidden" id="record-index" />
+
+      <label for="descricao">Descrição</label>
+      <input type="text" id="descricao" required />
+
+      <label for="data">Data</label>
+      <input type="date" id="data" required />
+
+      <label for="valor">Valor</label>
+      <input type="number" step="0.01" id="valor" required />
+
+      <label for="tipo">Tipo</label>
+      <select id="tipo" required>
+        <option value="">Selecione o tipo</option>
+        <option value="credito">Crédito</option>
+        <option value="debito">Débito</option>
+      </select>
+
+      <div class="form-actions">
+        <a href="table.html" class="btn btn-secondary">Voltar</a>
+        <button type="submit" class="btn btn-primary">Salvar Registro</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="form.js"></script>
+</body>
+<footer class="footer">
+    <p>&copy; 2023 - Lucas Moreira Pachêco</p>
+</footer>
+</html>

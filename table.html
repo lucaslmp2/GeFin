@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeFin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="shortcut icon" href="primary-chart-hilo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <h1><i id="icon" class="fas fa-chart-line"></i> GeFin</h1>
+
+        <section class="explanation-section">
+            <h2>Como Funciona</h2>
+            <p>
+                Este dashboard permite que você gerencie seus registros financeiros de forma simples e eficiente. Veja como utilizar as principais funcionalidades:
+            </p>
+            <ul>
+                <li><strong>Novo Registro:</strong> Clique no botão "Novo Registro" para adicionar uma nova entrada de crédito ou débito.</li>
+                <li><strong>Filtrar por Data:</strong> Utilize os campos de data para visualizar os registros de um período específico e clique em "Aplicar Filtro".</li>
+                <li><strong>Editar e Excluir:</strong> Na coluna "Ações", você pode modificar ou remover um registro a qualquer momento.</li>
+                <li><strong>Resumo Financeiro:</strong> O rodapé da tabela apresenta um resumo com o saldo anterior, totais e o saldo final do período selecionado.</li>
+            </ul>
+        </section>
+
+        <div class="btn-container">
+            <a href="form.html" class="btn">Novo Registro</a>
+        </div>
+
+        <div class="filter-container">
+            <label for="start-date">Data Inicial:</label>
+            <input type="date" id="start-date" name="start-date">
+            <label for="end-date">Data Final:</label>
+            <input type="date" id="end-date" name="end-date">
+            <button id="filter-btn" class="btn-filter" onclick="aplicarFiltro()">Aplicar Filtro</button>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <caption>Resumo e listagem de registros financeiros.</caption>
+                <tfoot>
+                    <tr>
+                        <th scope="row" colspan="4">Saldo Anterior</th>
+                        <td id="saldo-anterior"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="4">Total Créditos</th>
+                        <td id="total-creditos"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="4">Total Débitos</th>
+                        <td id="total-debitos"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="4">Saldo Final</th>
+                        <td id="saldo-final"></td>
+                    </tr>
+                </tfoot>
+                <thead>
+                    <tr>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="registros-financeiros">
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="table.js"></script>
+</body>
+<footer class="footer">
+    <p>&copy; 2023 - Lucas Moreira Pachêco</p>
+</footer>
+
+</html>
